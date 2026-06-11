@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:20px;
+width:400px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+color:#333;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+#message{
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+color:green;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Registration Form</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email Address">
+
+<input type="tel" id="phone" placeholder="Phone Number">
+
+<select id="department">
+<option value="">Select Department</option>
+<option>CSE</option>
+<option>IT</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+</select>
+
+<button onclick="registerStudent()">Register</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+function registerStudent(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+let dept=document.getElementById("department").value;
+
+if(name=="" || email=="" || phone=="" || dept==""){
+alert("Please fill all fields");
+return;
+}
+
+document.getElementById("message").innerHTML=
+"Registration Successful!";
+
+}
+
+</script>
+
+</body>
+</html>
